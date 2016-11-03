@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <title>Example Create a PvD Desktop - Citrix XenApp and XenDesktop SDK</title>
+  
+
+  <link rel="shortcut icon" href="
+https://www.citrix.com/etc/designs/citrix/icon-favicon.png">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  <link rel="stylesheet" href="../css/override.css" type="text/css" />
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Example Create a PvD Desktop";
+    var mkdocs_page_input_path = "example3.md";
+    var mkdocs_page_url = "/example3/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+	<div class="header-top">
+		<div class="header-top-left">
+			<a href="http://www.citrix.com" class="logo-position"><img height="60" src="https://thumbnail-ec2.sharefile.com/thumbnail.aspx?encparams=ypL2J0l-In6gqXJ7yeyKP8A1rqwKMH-C8-nfkJcHJNIN7Y0yZiJsYOcUe-uc0YeZzWLQSFSd1FnuMHPa30XSSINHuGOA8nvvnBT5WmjGlKvd5mxJ4IfT7iTVyHELwhWQiNCznPCiIFyhkA78uKX77PlU2iyhM4YdRM1NKabBe-4wXuiFJsbtAxyJ2UukO_E2ZSf1W3l75Dw8G0zflVkT-EFqyx1zSGId0qzLjm6nzJ8dA9zo-1AJzUisdzmGMzHOq_LMsOWyaalvmcWvCkl-q10GBSbfekfTIFW9LpZNYjkLNSnK8rcwNjWVr_jYayrGjIj2e5dDIMiDj3NRvW51AvHRjxYH9xRRRtY$" target="_blank" class="logo-citrix"><span style="color:#fff;font-size: 20px;position: relative;top:4px;left: 5px">SDK Reference</span></a>
+		</div>
+		<div class="header-top-right">
+			<ul>
+			<!--	<li class="list-inline home"><a href="..">HOME</a></li>
+				<li class="list-inline support"><a href="http://support.citrix.com">SUPPORT</a></li>-->
+				<form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+            <li class="list-inline support"><input name="q" id="txtName" type="text" placeholder="Search SDKs" 
+            class="searchdocs">
+<a class="fa fa-search errspan"></a></li>
+</form>
+				<!--<li class="list-inline"><a href="http://citrix.com/download">DOWNLOADS</a></li>-->
+			</ul>
+
+		</div>
+	</div>
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+	<i class="fa fa-search"></i>
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Overview</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../understandxd/">Understanding the XenDesktop Administration Model</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../getstarted/">Getting Started Guide</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Examples</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../example1/">Example Create a catalog</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../example2/">Example Create and configure a host</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Example Create a PvD Desktop</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#example-create-a-pvd-desktop">Example: Create a PvD Desktop</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../example4/">Example Get load balancing information</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+         <!-- <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Examples &raquo;</li>
+        
+      
+    
+    <li>Example Create a PvD Desktop</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/ajitchelat/AppDNA-SDK.git" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div> -->
+          <div role="main">
+            <div class="section">
+             
+                <h2 id="example-create-a-pvd-desktop"><a class="toclink" href="#example-create-a-pvd-desktop">Example: Create a PvD Desktop</a></h2>
+<p>This document provides an example of a script that creates a Delivery Group containing Personal
+vDisk (PvD) desktops.</p>
+<p>Before you begin, make sure you follow the steps detailed in <a href="http://docs.citrix.com/en-us/xenapp-and-xendesktop/7-6/cds-sdk-wrapper-rho/cds-sdk-use-XD-sdk.html"><em>Get started with the SDK</em></a>, which shows you how to use Studio to perform the operation you want to script and collect the log of SDK operations that Studio made to perform the task. This output can then be customized to produce a script for automating the task.</p>
+<p><strong>Note:</strong> To ensure you always get the latest enhancements and fixes, Citrix recommends you
+follow the procedure described in this document, rather than copying and pasting the example script.</p>
+<p><strong>Understand the script</strong></p>
+<p>The following section explains what each part of the script produced by Studio is doing. This will help you with the customization of your own script. Line numbers and line breaks have been added to the script for readability.</p>
+<div class="codehilite"><pre>1. Start-LogHighLevelOperation -AdminAddress &#39;test-ddc.mydomain.com:80&#39;
+-Source &#39;Studio&#39; -StartTime 31/07/2013 10:08:58 -Text &#39;Create Delivery Group `&#39;Win7 PvD
+Desktops`&#39;&#39;
+</pre></div>
+
+
+<p>Starts a logged operation and returns a log ID which is supplied to subsequent operations to associate them with the wider task.</p>
+<div class="codehilite"><pre><span class="x">2. New-BrokerDesktopGroup -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -ColorDepth &#39;TwentyFourBit&#39; -DeliveryType &#39;DesktopsOnly&#39; -DesktopKind &#39;Private&#39; -InMaintenanceMode</span>
+<span class="p">$</span><span class="nv">False</span><span class="x"> -IsRemotePC </span><span class="p">$</span><span class="nv">False</span><span class="x"> -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -MinimumFunctionalLevel &#39;L7&#39; -Name &#39;Win7 PvD Desktops&#39; -OffPeakBufferSizePercent 10 -PeakBufferSizePercent 10 -PublishedName &#39;Win7 PvD Desktops&#39; -Scope @() -SecureIcaRequired \</span><span class="p">$</span><span class="nv">False</span><span class="x"> -SessionSupport &#39;SingleSession -ShutdownDesktopsAfterUse \</span><span class="p">$</span><span class="nv">False</span><span class="x"> -TimeZone &#39;GMT Standard Time&#39;</span>
+</pre></div>
+
+
+<p>Creates a new Delivery Group with options collected by the Studio wizard.</p>
+<div class="codehilite"><pre>3. Add-BrokerMachinesToDesktopGroup -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Catalog &#39;win7-pvd&#39; -Count 2 -DesktopGroup &#39;Win7 PvD Desktops&#39; -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99
+</pre></div>
+
+
+<p>Adds the number of machines requested from the nominated catalog to the new Delivery Group.</p>
+<div class="codehilite"><pre><span class="x">4. Set-Variable -Name &#39;brokerUsers&#39; -Value @(&#39;S-1-5-21-3291547628-200264090-930806513-1104&#39;,&#39;S-1-5-21-3291547628-200264090-930806513-1105&#39;) Get-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Filter </span><span class="err">{</span><span class="x">(SID -in </span><span class="p">$</span><span class="nv">brokerUsers</span><span class="x">)} -MaxRecordCount 2147483647 Remove-Variable -Name &#39;brokerUsers&#39; New-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name</span>
+<span class="x">&#39;MYDOMAIN\user1&#39; New-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name</span>
+<span class="x">&#39;MYDOMAIN\user2&#39;</span>
+</pre></div>
+
+
+<p>The above commands are not required, Studio is verifying users.</p>
+<div class="codehilite"><pre>5. Test-BrokerAssignmentPolicyRuleNameAvailable -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name @(&#39;Win7 PvD Desktops&#39;)
+</pre></div>
+
+
+<p>Studio checks that the policy assignment name is available to use.</p>
+<div class="codehilite"><pre><span class="x">6. New-BrokerAssignmentPolicyRule -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -DesktopGroupUid 41 -Enabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedUserFilterEnabled </span><span class="p">$</span><span class="nv">False</span><span class="x"> -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -MaxDesktops 1 -Name &#39;Win7 PvD Desktops&#39;</span>
+</pre></div>
+
+
+<p>Create the new policy assignment rule for the Delivery Group. No users are specified here so
+all control is through the access policy rule.</p>
+<div class="codehilite"><pre><span class="x">7. Set-Variable -Name &#39;brokerUsers&#39; -Value @(&#39;S-1-5-21-3291547628-200264090-930806513-1104&#39;,&#39;S-1-5-21-3291547628-200264090-930806513-1105&#39;) </span>
+<span class="x">Get-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Filter </span><span class="err">{</span><span class="x">(SID -in \</span><span class="p">$</span><span class="nv">brokerUsers</span><span class="x">)} -MaxRecordCount 2147483647</span>
+
+<span class="x">Remove-Variable -Name &#39;brokerUsers&#39;</span>
+
+<span class="x">New-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name &#39;MYDOMAIN\\user1&#39;</span>
+
+<span class="x">New-BrokerUser -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name &#39;MYDOMAIN\\user2&#39;</span>
+</pre></div>
+
+
+<p>The above commands are not required, Studio is performing further checks.</p>
+<div class="codehilite"><pre>8. Test-BrokerAccessPolicyRuleNameAvailable -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name @(&#39;Win7 PvD Desktops\_Direct&#39;)
+</pre></div>
+
+
+<p>Studio tests that the access policy rule name is available to use.</p>
+<div class="codehilite"><pre><span class="x">9. New-BrokerAccessPolicyRule -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -AllowedConnections &#39;NotViaAG&#39; -AllowedProtocols @(&#39;HDX&#39;,&#39;RDP&#39;) -AllowRestart </span><span class="p">$</span><span class="nv">True</span><span class="x"> -DesktopGroupUid</span>
+<span class="x">41 -Enabled \</span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedSmartAccessFilterEnabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedUserFilterEnabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedUsers @(&#39;MYDOMAIN\user1&#39;,&#39;MYDOMAIN\user2&#39;) -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -Name &#39;Win7 PvD Desktops_Direct&#39;</span>
+</pre></div>
+
+
+<p>Creates the access policy rule for the new desktop for non-NetScaler Gateway connections.</p>
+<div class="codehilite"><pre><span class="x">10. Test-BrokerAccessPolicyRuleNameAvailable -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name @(&#39;Win7 PvD Desktops_AG&#39;) New-BrokerAccessPolicyRule -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -AllowedConnections &#39;ViaAG&#39; -AllowedProtocols @(&#39;HDX&#39;,&#39;RDP&#39;) -AllowRestart </span><span class="p">$</span><span class="nv">True</span><span class="x"> -DesktopGroupUid 41 -Enabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedSmartAccessFilterEnabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedSmartAccessTags @() -IncludedUserFilterEnabled </span><span class="p">$</span><span class="nv">True</span><span class="x"> -IncludedUsers</span>
+<span class="x">@(&#39;MYDOMAIN\user1&#39;,&#39;MYDOMAIN\user2&#39;) -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -Name &#39;Win7 PvDDesktops_AG&#39;</span>
+</pre></div>
+
+
+<p>Studio repeats this process for NetScaler Gateway connections.</p>
+<div class="codehilite"><pre><span class="x">11. Test-BrokerPowerTimeSchemeNameAvailable -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name @(&#39;Win7 PvD Desktops_Weekdays&#39;) New-BrokerPowerTimeScheme -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -DaysOfWeek &#39;Weekdays&#39; -DesktopGroupUid 41 -DisplayName &#39;Weekdays&#39; -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -Name &#39;Win7 PvD Desktops_Weekdays&#39; -PeakHours @(</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">, </span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">) -PoolSize @(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0) Test-BrokerPowerTimeSchemeNameAvailable -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -Name @(&#39;Win7 PvD Desktops_Weekend&#39;) New-BrokerPowerTimeScheme -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -DaysOfWeek &#39;Weekend&#39; -DesktopGroupUid 41 -DisplayName &#39;Weekend&#39; -LoggingId 846f2d42-a994-4bce-ab58-be05c8d73b99 -Name &#39;Win7 PvD Desktops_Weekend&#39; -PeakHours @(</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">True</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">,</span><span class="p">$</span><span class="nv">False</span><span class="x">) -PoolSize @(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)</span>
+</pre></div>
+
+
+<p>Studio checks that the names for the (optional) weekday and weekend power schemes are
+available, and adds these.</p>
+<div class="codehilite"><pre><span class="x">12. Stop-LogHighLevelOperation -AdminAddress &#39;test-ddc.mydomain.com:80&#39; -EndTime 31/07/2013 10:09:05 -HighLevelOperationId &#39;846f2d42-a994-4bce-ab58-be05c8d73b99&#39; -IsSuccessful </span><span class="p">$</span><span class="nv">True</span><span class="x"></span>
+</pre></div>
+
+
+<p>Stops the logged operation begun in step 1 and indicates it was successful.</p>
+<p><strong>Customize the script</strong></p>
+<p>This section shows how to convert and adapt the Studio output into a script that is more consumable.</p>
+<p>The script creates a Delivery Group containing PvD desktops. The catalog specified in the parameters must exist already and be populated appropriately (with an allocation type of static and a PvD disk). The script is designed to be run from a Powershell command line logged on as a Citrix administrator. No checks are made for permissions; the script will fail if the user does not have the appropriate permissions.</p>
+<div class="codehilite"><pre><span class="x">&amp;lt;\</span><span class="err">#</span><span class="x"></span>
+
+<span class="x">Sample usage:</span>
+
+<span class="x">.\CreatePvDGroup.ps1 `</span>
+
+<span class="x">-GroupName &quot;Win7 PvD Desktops&quot; `</span>
+
+<span class="x">-SrcCatalog &quot;win7-pvd&quot; `</span>
+
+<span class="x">-NumDesktops 2 `</span>
+
+<span class="x">-Users @(&#39;mydomain\user1&#39;,&#39;mydomain\user2&#39;) `</span>
+
+<span class="x">\</span><span class="err">#</span><span class="x">&amp;gt;</span>
+
+<span class="x">Param(</span>
+
+<span class="x">[Parameter(Mandatory=\</span><span class="p">$</span><span class="nv">true</span><span class="x">)\] \[string\] \</span><span class="p">$</span><span class="nv">GroupName</span><span class="x">,</span>
+
+<span class="x">\[Parameter(Mandatory=\</span><span class="p">$</span><span class="nv">true</span><span class="x">)\] \[string\] \</span><span class="p">$</span><span class="nv">SrcCatalog</span><span class="x">,</span>
+
+<span class="x">\[Parameter(Mandatory=\</span><span class="p">$</span><span class="nv">true</span><span class="x">)\] \[int\] \</span><span class="p">$</span><span class="nv">NumDesktops</span><span class="x">,</span>
+
+<span class="x">\[Parameter(Mandatory=\</span><span class="p">$</span><span class="nv">true</span><span class="x">)\] \[array\] \</span><span class="p">$</span><span class="nv">Users</span><span class="x"></span>
+
+<span class="x">\[string\] \</span><span class="p">$</span><span class="nv">AdminAddress</span><span class="x"></span>
+
+<span class="x">)</span>
+</pre></div>
+
+
+<p>The table explains the parameters used in the script.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th align="center">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SrcCatalog</td>
+<td align="center">The name of the catalog to be used to create the PvD desktop. Create the catalog by specifying an allocation type of static. Machines must also have PvD disks.</td>
+</tr>
+<tr>
+<td>GroupName</td>
+<td align="center">The name of the catalog to be used to create the PvD desktop. Create the catalog by specifying an allocation type of static. Machines must also have PvD disks.</td>
+</tr>
+<tr>
+<td>NumDesktops</td>
+<td align="center">The number of machines to add to the PvD desktop group. If insufficient machines are available, as many as possible are added.</td>
+</tr>
+<tr>
+<td>Users</td>
+<td align="center">Which users can access the group. This is a list of users or groups; for example, @('mydomain\Domain Users') or @('mydomain\user1','mydomain\user2')</td>
+</tr>
+</tbody>
+</table>
+<div class="codehilite"><pre><span class="nb">Set-HypAdminConnection</span> <span class="n">-AdminAddress</span> <span class="nv">$adminAddress</span>
+</pre></div>
+
+
+<p>Specify the hypervisor admin connection to use. Removes the need for the -AdminAddress for some
+of the commands.</p>
+<div class="codehilite"><pre><span class="nv">$peakPoolSize</span> <span class="p">=</span> <span class="n">2</span>
+
+<span class="nv">$weekendPoolSizeByHour</span> <span class="p">=</span> <span class="nb">new-object</span> <span class="n">int</span><span class="p">[]</span> <span class="n">24</span>
+
+<span class="nv">$weekdayPoolSizeByHour</span> <span class="p">=</span> <span class="nb">new-object</span> <span class="n">int</span><span class="p">[]</span> <span class="n">24</span>
+
+<span class="n">9</span><span class="p">..</span><span class="n">17</span> <span class="p">|</span> <span class="p">%{</span> <span class="nv">$weekdayPoolSizeByHour</span><span class="p">[</span><span class="nv">$_</span><span class="p">]</span> <span class="p">=</span> <span class="nv">$peakPoolSize</span> <span class="p">}</span>
+
+<span class="nv">$peakHours</span> <span class="p">=</span> <span class="p">(</span><span class="n">0</span><span class="p">..</span><span class="n">23</span> <span class="p">|</span> <span class="p">%{</span> <span class="nv">$_</span> <span class="o">-ge</span> <span class="n">9</span> <span class="o">-and</span> <span class="nv">$_</span> <span class="o">-le</span> <span class="n">17</span> <span class="p">})</span>
+</pre></div>
+
+
+<p>This creates 24 element arrays with a 1 or a 0 in each entry. Use these to specify when peak
+hours are for the power schedules for the Delivery Groups. Elements 9 to 17 (hours starting 09:00 to 17:00) for weekdays are set to 1, others are left at 0. Two unassigned machines are powered up during peak times, if available.</p>
+<div class="codehilite"><pre><span class="nv">$logId</span> <span class="p">=</span> <span class="nb">Start-LogHighLevelOperation</span><span class="p">`</span> <span class="n">-Text</span> <span class="s2">&quot;Create PvD desktop group&quot;</span> <span class="p">`</span>
+<span class="n">-Source</span> <span class="s2">&quot;Create PvD Desktop Group Script&quot;</span>
+</pre></div>
+
+
+<p>Start a new logged operation. This returns a log ID which is passed into subsequent
+operations to associate them with the create group task.</p>
+<div class="codehilite"><pre><span class="nv">$grp</span> <span class="p">=</span> <span class="nb">New-BrokerDesktopGroup</span> <span class="p">`</span>
+
+<span class="n">-DesktopKind</span> <span class="s1">&#39;Private&#39;</span> <span class="p">`</span>
+
+<span class="n">-DeliveryType</span> <span class="s1">&#39;DesktopsOnly&#39;</span> <span class="p">`</span>
+
+<span class="n">-LoggingId</span> <span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span> <span class="p">`</span>
+
+<span class="n">-Name</span> <span class="nv">$GroupName</span> <span class="p">`</span>
+
+<span class="n">-PublishedName</span> <span class="nv">$GroupName</span> <span class="p">`</span>
+
+<span class="n">-SessionSupport</span> <span class="s1">&#39;SingleSession&#39;</span> <span class="p">`</span>
+
+<span class="n">-ShutdownDesktopsAfterUse</span> <span class="nv">$False</span>
+
+<span class="nv">$count</span> <span class="p">=</span> <span class="nb">Add-BrokerMachinesToDesktopGroup</span> <span class="p">`</span>
+
+<span class="n">-Catalog</span> <span class="nv">$SrcCatalog</span> <span class="p">`</span>
+
+<span class="n">-Count</span> <span class="nv">$NumDesktops</span> <span class="p">`</span>
+
+<span class="n">-DesktopGroup</span> <span class="p">\</span><span class="nv">$GroupName</span> <span class="p">`</span>
+
+<span class="n">-LoggingId</span> <span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span>
+
+<span class="s2">&quot;$count machines added to the PvD desktop group&quot;</span>
+</pre></div>
+
+
+<p>Create the new Delivery Group, delivering private desktops. The catalog used must have been
+populated with suitable machines (permanent with a PvD disk). PublishedName is the name seen by end users; the following uses the same name as the group name.</p>
+<div class="codehilite"><pre><span class="nb">New-BrokerAssignmentPolicyRule</span> <span class="p">\`</span>
+
+<span class="n">-DesktopGroupUid</span> <span class="p">\</span><span class="nv">$grp</span><span class="p">.</span><span class="n">Uid</span> <span class="p">\`</span>
+
+<span class="n">-IncludedUserFilterEnabled</span> <span class="p">\</span><span class="nv">$False</span> <span class="p">\`</span>
+
+<span class="n">-LoggingId</span> <span class="p">\</span><span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span> <span class="p">\`</span>
+
+<span class="n">-MaxDesktops</span> <span class="n">1</span> <span class="p">\`</span>
+
+<span class="n">-Name</span> <span class="p">(\</span><span class="nv">$GroupName</span> <span class="p">+</span> <span class="s1">&#39;\_AssignRule&#39;</span><span class="p">)</span> <span class="p">\`</span>
+
+<span class="p">|</span> <span class="nb">Out-Null</span>
+</pre></div>
+
+
+<p>Assigned desktops need an assignment policy. Disable user filter so that access is controlled
+entirely by access policy rules.</p>
+<div class="codehilite"><pre><span class="nb">New-BrokerAccessPolicyRule</span> <span class="p">`</span>
+
+<span class="n">-AllowedConnections</span> <span class="s1">&#39;NotViaAG&#39;</span> <span class="p">`</span>
+
+<span class="n">-AllowedProtocols</span> <span class="p">@(</span><span class="s1">&#39;HDX&#39;</span><span class="p">,</span><span class="s1">&#39;RDP&#39;</span><span class="p">)</span> <span class="p">`</span>
+
+<span class="n">-AllowRestart</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-DesktopGroupUid</span> <span class="nv">$grp</span><span class="p">.</span><span class="n">Uid</span> <span class="p">`</span>
+
+<span class="n">-IncludedSmartAccessFilterEnabled</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-IncludedUserFilterEnabled</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-IncludedUsers</span> <span class="nv">$Users</span> <span class="p">`</span>
+
+<span class="n">-LoggingId</span> <span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span> <span class="p">`</span>
+
+<span class="n">-Name</span> <span class="p">(</span><span class="nv">$GroupName</span> <span class="p">+</span> <span class="s1">&#39;_Direct&#39;</span><span class="p">)</span> <span class="p">`</span>
+
+<span class="p">|</span> <span class="nb">Out-Null</span>
+
+<span class="nb">New-BrokerAccessPolicyRule</span> <span class="p">`</span>
+
+<span class="n">-AllowedConnections</span> <span class="s1">&#39;ViaAG&#39;</span> <span class="p">`</span>
+
+<span class="n">-AllowedProtocols</span> <span class="p">@(</span><span class="s1">&#39;HDX&#39;</span><span class="p">,</span><span class="s1">&#39;RDP&#39;</span><span class="p">)</span> <span class="p">`</span>
+
+<span class="n">-AllowRestart</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-DesktopGroupUid</span> <span class="nv">$grp</span><span class="p">.</span><span class="n">Uid</span> <span class="p">`</span>
+
+<span class="n">-IncludedSmartAccessFilterEnabled</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-IncludedSmartAccessTags</span> <span class="p">@()</span> <span class="p">`</span>
+
+<span class="n">-IncludedUserFilterEnabled</span> <span class="nv">$True</span> <span class="p">`</span>
+
+<span class="n">-IncludedUsers</span> <span class="nv">$Users</span> <span class="p">`</span>
+
+<span class="n">-LoggingId</span> <span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span> <span class="p">`</span>
+
+<span class="n">-Name</span> <span class="p">(</span><span class="nv">$GroupName</span> <span class="p">+</span> <span class="s1">&#39;_AG&#39;</span><span class="p">)</span> <span class="p">`</span>
+
+<span class="p">|</span> <span class="nb">Out-Null</span>
+</pre></div>
+
+
+<p>Specify any access restrictions: allow direct access using NetScaler Gateway, using HDX &amp;
+RDP protocols. The user can request the desktop be restarted, if necessary.</p>
+<div class="codehilite"><pre><span class="x">New-BrokerPowerTimeScheme `</span>
+
+<span class="x">-DaysOfWeek &#39;Weekdays&#39; `</span>
+
+<span class="x">-DesktopGroupUid </span><span class="p">$</span><span class="nv">grp</span><span class="p">.</span><span class="nv">Uid</span><span class="x"> `</span>
+
+<span class="x">-DisplayName &#39;Weekdays&#39; `</span>
+
+<span class="x">-LoggingId </span><span class="p">$</span><span class="nv">logId</span><span class="p">.</span><span class="nv">Id</span><span class="x"> `</span>
+
+<span class="x">-Name (</span><span class="p">$</span><span class="nv">GroupName</span><span class="x"> + &#39;_Weekdays&#39;) `</span>
+
+<span class="x">-PeakHours </span><span class="p">$</span><span class="nv">peakHours</span><span class="x"> `</span>
+
+<span class="x">-PoolSize </span><span class="p">$</span><span class="nv">weekdayPoolSizeByHour</span><span class="x"> `</span>
+
+<span class="x">| Out-Null</span>
+
+<span class="x">New-BrokerPowerTimeScheme `</span>
+
+<span class="x">-DaysOfWeek &#39;Weekend&#39; `</span>
+
+<span class="x">-DesktopGroupUid </span><span class="p">$</span><span class="nv">grp</span><span class="p">.</span><span class="nv">Uid</span><span class="x"> `</span>
+
+<span class="x">-DisplayName &#39;Weekend&#39; `</span>
+
+<span class="x">-LoggingId </span><span class="p">$</span><span class="nv">logId</span><span class="p">.</span><span class="nv">Id</span><span class="x"> `</span>
+
+<span class="x">-Name (</span><span class="p">$</span><span class="nv">GroupName</span><span class="x"> + &#39;_Weekend&#39;) `</span>
+
+<span class="x">-PeakHours </span><span class="p">$</span><span class="nv">peakHours</span><span class="x"> `</span>
+
+<span class="x">-PoolSize </span><span class="p">$</span><span class="nv">weekendPoolSizeByHour</span><span class="x"> `</span>
+
+<span class="x">| Out-Null</span>
+</pre></div>
+
+
+<p>Optional: Specify power schedules.</p>
+<div class="codehilite"><pre><span class="nb">Stop-LogHighLevelOperation</span> <span class="n">-HighLevelOperationId</span>
+<span class="nv">$logId</span><span class="p">.</span><span class="n">Id</span> <span class="n">-IsSuccessful</span> <span class="nv">$True</span>
+</pre></div>
+
+
+<p>Stop configuration logging and indicate if successful or not.</p>
+              
+               
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<!--<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a href="https://github.com/ajitchelat/AppDNA-SDK.git" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span class="prev"><a href="../example2/"><i class="fa fa-angle-left"></i> Previous</a></span>
+      
+      
+        <span class="next"><a href="../example4/">Next <i class="fa fa-angle-right"></i></a></span>
+      
+    </span>
+	<div class="footer-right">
+		<ul class="social-links">
+			<li class="list-inline"><a href="https://twitter.com/citrix"><i class="fa fa-twitter"></i>@citrix</a></li>
+			<li class="list-inline"><a href="mailto:support@citrix.com"><i class="fa fa-envelope-o"></i>support@citrix.com</a></li>
+		</ul>
+		<ul class="inner-pages">
+			<li class="list-inline"><a href="http://citrix.com/about/legal">Privacy and Terms</li>
+		</ul>
+	</div>
+</div>-->
+
+</body>
+</html>
