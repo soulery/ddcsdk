@@ -1,17 +1,17 @@
-  /* first assign web font */
-  @font-face {
-    font-family: 'NettoWeb';
-    src: url('../fonts/NettoWeb.woff') format('woff');
-  }
-  /* first assign web font */
-  @font-face {
-    font-family: 'NettoWeb-Bold';
-    src: url('../fonts/NettoWeb-Bold.woff') format('woff');
-  }
-  @font-face {
-    font-family: 'fontawesome-webfont';
-    src: url('../fonts/fontawesome-webfont.woff') format('woff');
-  }
+@font-face{
+font-family:"citrixsans-regular";
+src:url("citrix-sans/citrixsans-regular.eot");
+src:url("citrix-sans/citrixsans-regular.eot?") format('eot'),
+    url("citrix-sans/citrixsans-regular.woff") format("woff"),
+    url("citrix-sans/citrixsans-regular.ttf") format("truetype"),
+}
+@font-face{
+font-family:"citrixsans-bold";
+src:url("citrix-sans/citrixsans-bold.eot");
+src:url("citrix-sans/citrixsans-bold.eot?") format('eot'),
+    url("citrix-sans/citrixsans-bold.woff") format("woff"),
+    url("citrix-sans/citrixsans-bold.ttf") format("truetype"),
+}
       
   /* go on with normal style definitions */
   html, body, div, span, applet, object, iframe,
@@ -27,13 +27,14 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video ,input[type="text"]{
-    font-family: 'NettoWeb', serif ;
-  }
+    	font-family: 'citrixsans-regular', sans-serif;
+}
 
 h1, h2, h3, h4, h5, h6{
-     font-family: 'NettoWeb-Bold', serif;
-	 font-weight:600;
+     	font-family: 'citrixsans-bold', sans-serif;
+		font-weight:600;
 }
+
 pre {
     display: block;
     padding: 9.5px;
