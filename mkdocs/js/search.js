@@ -1,5 +1,5 @@
 require.config( { 
-waitSeconds : 1}
+waitSeconds : 0}
 )
 
 require([
